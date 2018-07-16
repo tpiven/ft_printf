@@ -79,15 +79,16 @@ void		ft_audit_setloc(t_form *frt)
 	i = 0;
 	if (MB_CUR_MAX <= 1)
 		while (frt->arr[i] != 0)
-		{
+        {
 			if (frt->arr[i] > 127)
 			{
 				frt->setloc = -1;
 				free(frt->arr);
 				return ;
 			}
-			i++;
-		}
+            i++;
+        }
+    
 }
 
 void		ft_handle_wstr(va_list *ap, t_form *frt)
